@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth Enrichment Program</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 </head>
 <body>
     <header>
 
         <section class="mini-header">
-            <h1>rwcason62@gmail.com</h1>
-            <button class="donate-button">DONATE</button>
+            
+            <div class="email">
+                <a href="mailto:rwcason62@gmail.com">
+                    <span class="material-symbols-outlined" id="mail">mail</span>
+                </a>
+                <a id="mail-link" href="mailto:rwcason62@gmail.com">rwcason62@gmail.com</a>
+            </div>
+                    
+            <button onclick="location.href='//www.paypal.com/donate?hosted_button_id=Y8ESDJA98LKBS'" class="donate-button">DONATE</button>
+
         </section>
 
         <section class="main-header">
+            
             <div>
                 <img src="images/logo.png" alt="Youth Enrichment Program Logo" class="logo">
             </div>
 
-            <nav>
+            <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="programs.html">Programs</a>
                 <a href="about.html">About</a>
@@ -29,9 +39,9 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
             
-            <div>
-                <h3>Any Questions?</h3>
-                <p>Phone 318-517-8361</p>
+            <div class="contact-info">
+                <h3 id="questions">Any Questions?</h3>
+                <p id="phone">Phone 318-517-8361</p>
             </div>
         </section>
     </header>
