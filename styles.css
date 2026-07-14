@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 0px;
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 0;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: #000000;
+    margin: 0;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 475;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 65px;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.donate-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #8E3CCF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+
+.mini-header {
+    background-color: #008F70;
+    height: 75px;
+    padding-right: 75px;
+    padding-left: 75px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header {
+    padding-left: 85px;
+    padding-right: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: min(300px, 40vw);
+    height: auto;
+    position: static;
+}
