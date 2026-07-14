@@ -139,3 +139,36 @@ nav {
     color: #ffffff;
     text-decoration: none;
 }
+
+/* Hero Section */
+
+.hero button{
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    left: 7%;
+}
+
+.hero img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.donate-button2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #008F70;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+.donate-button2:hover {
+    background-color: #037058;
+    transition: background-color 0.3s ease;
+}
