@@ -14,10 +14,10 @@ header {
     display: block;
 }
 
-h1 {
+h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 450;
     margin: 0;
 }
 
@@ -171,4 +171,162 @@ nav {
 .donate-button2:hover {
     background-color: #037058;
     transition: background-color 0.3s ease;
+}
+
+/* Mission Section */
+
+.mission {
+    display: block;
+    padding: 50px 75px;
+}
+
+.mission-text {
+    width: 50%;
+    margin: 0 auto;       
+    text-align: center;   
+    padding: 0 150px;     
+    box-sizing: border-box;          
+}
+
+.mission-text h3 {
+    font-size: 1.7rem;
+    font-weight: 365;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    padding-top: 15px;
+    width: 900px;
+}
+
+.mission-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;     
+    gap: 100px;           
+    width: 100%;
+    padding-left: 0; 
+}
+
+.mission-image img {
+    width: 500px;
+    max-width: 100%; 
+    height: auto;
+    border-radius: 15px 15px 0 0; 
+    object-fit: cover;
+}
+
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* keeps the image's rounded top corners clipped correctly */
+}
+
+.mission-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.mission-topic {
+    background-color: #ffffff;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.mission-topic h3 {
+    color: #000000; /* was white text on green, now needs a dark color on white */
+    font-weight: 625;
+    font-size: 1.7rem;
+}
+
+/* Ways to Donate Section */
+.donate-image {
+    position: relative;
+}
+
+.donate-image img {
+    width: 100%;
+    height: auto;
+}
+
+.donate-box {
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    width: 20%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 50px 0px 50px;
+}
+
+.donate-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 640;
+    color: #000000;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.donate-box p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    line-height: 2.3;
+    color: #636363;
+    margin: 0;
+    padding: 5px 20px 10px 20px;
+}
+
+.donate-box button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.donate-text {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    top: 25%;
+    right: 5%;
+    width: 35%;
+    text-align: right;
+    padding: 15px 50px;
+}
+
+.donate-quote {
+    font-style: italic;
+    font-size: 1.7rem;
+    font-weight: 460;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+    padding: 5px 20px 20px 20px;
+}
+
+.donate-quote-author {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 20px 0 20px;
+}
+
+.donate-quote-author h3 {
+    font-weight: 456;
 }
