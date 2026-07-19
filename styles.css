@@ -170,7 +170,9 @@ nav {
 
 .donate-button2:hover {
     background-color: #037058;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 143, 112, 0.25);
 }
 
 /* Mission Section */
@@ -418,7 +420,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 30=50px;
+    max-width: 350px;
 }
 
 .footer-logo-img {
@@ -480,4 +482,258 @@ footer {
     opacity: 0.75;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Programs Header */
+
+.programs-header img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+
+/* Program Feature Sections */
+.program-feature {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+}
+
+.program-feature.tone-green::before {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #008F70;
+    opacity: 0.05;
+    top: 10%;
+    left: -5%;
+    z-index: 0;
+}
+.program-feature.tone-purple::before {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #8E3CCF;
+    opacity: 0.05;
+    top: 10%;
+    right: -5%;
+    z-index: 0;
+}
+
+.program-feature-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 75px;
+    flex-wrap: wrap;
+}
+
+.program-feature.reverse .program-feature-inner {
+    flex-direction: row-reverse;
+}
+
+.program-feature-text {
+    flex: 1;
+    min-width: 320px;
+    max-width: 560px;
+}
+
+.accent-line {
+    width: 60px;
+    height: 3px;
+    margin-bottom: 20px;
+}
+
+.tone-green .accent-line { background-color: #008F70; }
+.tone-purple .accent-line { background-color: #8E3CCF; }
+
+.program-feature-text h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #2B2B2B;
+    margin-bottom: 12px;
+}
+
+.program-date-italic {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tone-green .program-date-italic { color: #008F70; }
+.tone-purple .program-date-italic { color: #8E3CCF; }
+
+.program-feature-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #4a4a4a;
+    margin-bottom: 18px;
+}
+
+.program-info-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin: 28px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.info-item h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #999999;
+    margin-bottom: 6px;
+}
+
+.info-item p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    color: #2B2B2B;
+    margin-bottom: 0;
+}
+
+.program-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.program-buttons .donate-button {
+    font-size: 1.05rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-buttons .donate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 143, 112, 0.25);
+}
+
+.outline-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #008F70;
+    color: #008F70;
+    border-radius: 8px;
+    padding: 10px 26px;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.outline-button:hover {
+    background-color: #008F70;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+.tone-green .outline-button {
+    color: #8E3CCF;
+    border: 2px solid #8E3CCF;
+}
+.tone-green .outline-button:hover {
+    background-color: #8E3CCF;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.tone-purple .outline-button {
+    color: #008F70;
+    border: 2px solid #008F70;
+}
+.tone-purple .outline-button:hover {
+    background-color: #008F70;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.tone-green .donate-button {
+    background-color: #008F70;
+}
+
+.tone-green .donate-button:hover {
+    background-color: #037058;
+}
+
+.tone-purple .donate-button {
+    background-color: #8E3CCF;
+}
+
+.tone-purple .donate-button:hover {
+    background-color: #6A2EA0;
+}
+
+/* Program image */
+.program-image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.program-image img:hover {
+    transform: translateY(-6px);
+}
+
+/* CTA Section */
+
+.programs-cta {
+    position: relative;
+    text-align: center;
+    padding: 100px 75px;
+    background-image: linear-gradient(rgba(251, 248, 242, 0.88), rgba(251, 248, 242, 0.88)), url('images/cta-banner.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.programs-cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.programs-cta h2 {
+    font-family: 'Roboto', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #2B2B2B;
+    margin-bottom: 15px;
+}
+
+.programs-cta p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    margin-bottom: 30px;
+}
+
+.programs-cta .donate-button {
+    background-color: #008F70;
+}
+
+.programs-cta .donate-button:hover {
+    background-color: #037058;
 }
