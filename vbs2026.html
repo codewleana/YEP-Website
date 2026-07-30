@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBS 2026 - Youth Enrichment Program</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+</head>
+<body>
+    <header>
+
+        <section class="mini-header">
+            
+            <div class="email">
+                <a href="mailto:info@yepcompany.net">
+                    <span class="material-symbols-outlined" id="mail">mail</span>
+                </a>
+                <a id="mail-link" href="mailto:info@yepcompany.net">info@yepcompany.net</a>
+            </div>
+                    
+            <button onclick="location.href='https://giv.li/swun8w'" class="donate-button">DONATE</button>
+
+        </section>
+
+        <section class="main-header">
+            
+            <div>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Youth Enrichment Program Logo" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+
+                <div class="dropdown">
+                    <a href="#~">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about-yep.html">About YEP</a></li>
+                        <li><a href="about-founder.html">About the Founder</a></li>
+                        <li><a href="about-board.html">About the Board</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#~">Support</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sponsor.html">Sponsor Us</a></li>
+                        <li><a href="volunteer.html">Volunteering</a></li>
+                    </ul>
+                </div>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            
+            <div class="contact-info">
+                <h3 id="questions">Any Questions?</h3>
+                <a href="tel:318-517-8361" id="phone">
+                    <p id="phone">Phone 318-517-8361</p>
+                </a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>VBS 2026</h2>
+            <p>Moments from our annual VBS program.</p>
+        </section>
+        
+
+        <div class="gallery" id="gallery">
+        <!-- Replace these src values with your own image URLs/paths -->
+            <img src="images/vbs-pic1.svg" alt="Photo 1">
+            <img src="images/vbs-pic2.svg" alt="Photo 2">
+            <img src="images/vbs-pic3.svg" alt="Photo 3">
+            <img src="images/vbs-pic4.svg" alt="Photo 4">
+            <img src="images/vbs-pic5.svg" alt="Photo 5">
+            <img src="images/vbs-pic6.svg" alt="Photo 6">
+            <img src="images/vbs-pic7.svg" alt="Photo 7">
+            <img src="images/vbs-pic8.svg" alt="Photo 7">
+        
+
+        </div>
+
+        <!-- Lightbox markup -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+            <img id="lightboxImg" src="" alt="">
+            <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </main>
+        
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/footer-logo.svg" alt="Youth Enrichment Program Logo" class="footer-logo-img">
+                <p class="footer-tagline">Empowering rural Louisiana youth, one <br>summer at a time.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+                <a href="about.html">About</a>
+                <a href="support.html">Support</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <a href="tel:318-517-8361">318-517-8361</a>
+                <a href="mailto:info@yepcompany.net">info@yepcompany.net</a>
+                <button onclick="location.href='https://giv.li/swun8w'" class="donate-button">DONATE</button>
+            </div>
+        </div>
+
+        <p class="copyright">&copy; 2026 Youth Enrichment Program. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+  const gallery = document.getElementById('gallery');
+  const thumbs = Array.from(gallery.querySelectorAll('img'));
+ 
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const counter = document.getElementById('lightboxCounter');
+  const btnClose = document.getElementById('lightboxClose');
+  const btnPrev = document.getElementById('lightboxPrev');
+  const btnNext = document.getElementById('lightboxNext');
+ 
+  let currentIndex = 0;
+ 
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+  }
+ 
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+ 
+  function updateLightboxImage() {
+    const img = thumbs[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    counter.textContent = `${currentIndex + 1} / ${thumbs.length}`;
+  }
+ 
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    updateLightboxImage();
+  }
+ 
+  function showNext() {
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    updateLightboxImage();
+  }
+ 
+  // Click a thumbnail to open
+  thumbs.forEach((img, index) => {
+    img.addEventListener('click', () => openLightbox(index));
+  });
+ 
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', showPrev);
+  btnNext.addEventListener('click', showNext);
+ 
+  // Click outside the image (on the dark backdrop) to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+ 
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+ 
+  // Swipe support for touch devices
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+  lightbox.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? showPrev() : showNext();
+    }
+  });
+</script>
+</body>
+</html>
